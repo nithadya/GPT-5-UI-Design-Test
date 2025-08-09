@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="dark light" />
+    <meta name="theme-color" content="#0b1020" />
+    <meta name="description"
+        content="Design UML, Flowcharts, and Chen ER diagrams faster with AI and real-time collaboration. DiagramForge is the modern workspace for visual architecture." />
+    <title>DiagramForge — Design UML, Flowcharts, and ER Diagrams with AI</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap"
+        rel="stylesheet">
+    <link rel="icon"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' x2='1' y1='0' y2='1'%3E%3Cstop stop-color='%237c3aed'/%3E%3Cstop offset='1' stop-color='%2306b6d4'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='128' height='128' rx='24' fill='%230b1020'/%3E%3Ccircle cx='40' cy='40' r='16' fill='url(%23g)'/%3E%3Ccircle cx='88' cy='40' r='16' fill='url(%23g)'/%3E%3Ccircle cx='64' cy='88' r='16' fill='url(%23g)'/%3E%3Cpath d='M56 48 L64 72 L80 48' stroke='%2322d3ee' stroke-width='6' fill='none' stroke-linecap='round'/%3E%3C/svg%3E" />
+    <link rel="stylesheet" href="./styles.css" />
+    <script defer src="./script.js"></script>
+</head>
+
+<body class="theme-dark">
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header" data-reveal>
+        <div class="container nav">
+            <a href="#" class="brand" aria-label="DiagramForge home">
+                <svg class="brand-mark" viewBox="0 0 48 48" aria-hidden="true" focusable="false">
+                    <defs>
+                        <linearGradient id="brand-g" x1="0" x2="1" y1="0" y2="1">
+                            <stop stop-color="#7c3aed"></stop>
+                            <stop offset="1" stop-color="#06b6d4"></stop>
+                        </linearGradient>
+                    </defs>
+                    <circle cx="14" cy="14" r="6" fill="url(#brand-g)"></circle>
+                    <circle cx="34" cy="14" r="6" fill="url(#brand-g)"></circle>
+                    <circle cx="24" cy="34" r="6" fill="url(#brand-g)"></circle>
+                    <path d="M18 18 L24 30 L30 18" stroke="#22d3ee" stroke-width="2.5" fill="none"
+                        stroke-linecap="round"></path>
+                </svg>
+                <span>DiagramForge</span>
+            </a>
+            <nav class="nav-links" aria-label="Primary">
+                <a href="#features">Features</a>
+                <a href="#pricing">Pricing</a>
+                <a href="#testimonials">Testimonials</a>
+            </nav>
+            <div class="nav-cta">
+                <button class="btn ghost" id="themeToggle" aria-label="Toggle theme">Theme</button>
+                <a class="btn subtle" href="#pricing">Sign in</a>
+                <a class="btn primary" href="#pricing">Get started</a>
+            </div>
+            <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false"
+                aria-controls="mobileMenu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+        <div class="mobile-menu" id="mobileMenu" hidden>
+            <a href="#features">Features</a>
+            <a href="#pricing">Pricing</a>
+            <a href="#testimonials">Testimonials</a>
+            <a class="btn primary" href="#pricing">Get started</a>
+        </div>
+    </header>
+
+    <main id="main">
+        <section class="hero" id="hero">
+            <div class="hero-bg">
+                <div class="orb orb-a"></div>
+                <div class="orb orb-b"></div>
+                <div class="grid-overlay"></div>
+            </div>
+            <div class="container hero-inner">
+                <div class="hero-copy" data-reveal>
+                    <div class="eyebrow">UML • Flowcharts • Chen ER</div>
+                    <h1>
+                        Design diagrams.
+                        <span class="gradient-text">Faster.</span>
+                        Together.
+                    </h1>
+                    <p class="subhead">Build clear system diagrams in minutes with AI prompts, real‑time collaboration,
+                        and a delightful canvas engineered for speed.</p>
+                    <div class="hero-ctas">
+                        <a href="#pricing" class="btn xl primary">Start free</a>
+                        <a href="#ai-demo" class="btn xl outline">Generate with AI</a>
+                    </div>
+                    <div class="hero-stats">
+                        <div><strong>120k+</strong><span>teams</span></div>
+                        <div><strong>98%</strong><span>faster drafts</span></div>
+                        <div><strong>4.9★</strong><span>avg rating</span></div>
+                    </div>
+                </div>
+                <figure class="hero-visual" data-reveal>
+                    <div class="canvas">
+                        <svg class="connections" viewBox="0 0 600 380" preserveAspectRatio="xMidYMid meet"
+                            aria-hidden="true">
+                            <defs>
+                                <linearGradient id="line-g" x1="0" x2="1">
+                                    <stop stop-color="#22d3ee" />
+                                    <stop offset="1" stop-color="#a78bfa" />
+                                </linearGradient>
+                                <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+                                    <feGaussianBlur stdDeviation="3" result="b" />
+                                    <feMerge>
+                                        <feMergeNode in="b" />
+                                        <feMergeNode in="SourceGraphic" />
+                                    </feMerge>
+                                </filter>
+                            </defs>
+                            <path d="M120 80 C200 80, 220 160, 300 160" stroke="url(#line-g)" stroke-width="2.5"
+                                fill="none" filter="url(#glow)" />
+                            <path d="M300 160 C380 160, 420 100, 480 120" stroke="url(#line-g)" stroke-width="2.5"
+                                fill="none" filter="url(#glow)" />
+                            <path d="M220 280 C280 260, 360 260, 420 220" stroke="url(#line-g)" stroke-width="2.5"
+                                fill="none" filter="url(#glow)" />
+                        </svg>
+                        <div class="node n1">Order Service</div>
+                        <div class="node n2">UML Class
+                            <code>Order{id, status}</code>
+                        </div>
+                        <div class="node n3">Flow: Checkout</div>
+                        <div class="node n4">Chen ER
+                            <code>Customer — places — Order</code>
+                        </div>
+                    </div>
+                </figure>
+            </div>
+        </section>
+
+        <section class="features" id="features">
+            <div class="container">
+                <div class="section-head" data-reveal>
+                    <h2>Everything you need to diagram at the speed of thought</h2>
+                    <p>From UML to Chen, with AI superpowers and multiplayer built‑in.</p>
+                </div>
+                <div class="features-grid">
+                    <article class="card feature" data-reveal>
+                        <div class="icon">
+                            <svg viewBox="0 0 48 48" aria-hidden="true">
+                                <defs>
+                                    <linearGradient id="f1" x1="0" x2="1">
+                                        <stop stop-color="#7c3aed" />
+                                        <stop offset="1" stop-color="#06b6d4" />
+                                    </linearGradient>
+                                </defs>
+                                <rect x="6" y="10" width="36" height="12" rx="6" fill="url(#f1)" />
+                                <rect x="6" y="26" width="36" height="12" rx="6" fill="#22d3ee" opacity="0.8" />
+                            </svg>
+                        </div>
+                        <h3>Multi‑diagram workspace</h3>
+                        <p>Switch between UML, Flowcharts, and Chen ER in one canvas. Mix notations with type‑aware
+                            snapping and smart connectors.</p>
+                    </article>
+                    <article class="card feature" data-reveal>
+                        <div class="icon">
+                            <svg viewBox="0 0 48 48" aria-hidden="true">
+                                <defs>
+                                    <linearGradient id="f2" x1="0" x2="1">
+                                        <stop stop-color="#22d3ee" />
+                                        <stop offset="1" stop-color="#a78bfa" />
+                                    </linearGradient>
+                                </defs>
+                                <path d="M8 24h32" stroke="url(#f2)" stroke-width="4" stroke-linecap="round" />
+                                <circle cx="24" cy="24" r="14" fill="none" stroke="url(#f2)" stroke-width="3" />
+                            </svg>
+                        </div>
+                        <h3>AI generation</h3>
+                        <p>Describe your system in plain English. Get draft UML, flows, or ER models instantly, ready to
+                            tweak.</p>
+                    </article>
+                    <article class="card feature" data-reveal>
+                        <div class="icon">
+                            <svg viewBox="0 0 48 48" aria-hidden="true">
+                                <defs>
+                                    <linearGradient id="f3" x1="0" x2="1">
+                                        <stop stop-color="#7c3aed" />
+                                        <stop offset="1" stop-color="#22d3ee" />
+                                    </linearGradient>
+                                </defs>
+                                <path d="M10 20h28v18H10z" fill="none" stroke="url(#f3)" stroke-width="3" />
+                                <circle cx="16" cy="15" r="5" fill="url(#f3)" />
+                                <circle cx="32" cy="15" r="5" fill="url(#f3)" />
+                            </svg>
+                        </div>
+                        <h3>Real‑time collaboration</h3>
+                        <p>Invite teammates to co‑edit with cursors, comments, and presence—no installs, no friction.
+                        </p>
+                    </article>
+                    <article class="card feature" data-reveal>
+                        <div class="icon">
+                            <svg viewBox="0 0 48 48" aria-hidden="true">
+                                <defs>
+                                    <linearGradient id="f4" x1="0" x2="1">
+                                        <stop stop-color="#06b6d4" />
+                                        <stop offset="1" stop-color="#7c3aed" />
+                                    </linearGradient>
+                                </defs>
+                                <path d="M12 12h24v8H12zM12 24h24v12H12z" fill="none" stroke="url(#f4)"
+                                    stroke-width="3" />
+                            </svg>
+                        </div>
+                        <h3>Versioning & history</h3>
+                        <p>Branch, review, and restore any change. Keep your architecture decisions auditable.</p>
+                    </article>
+                    <article class="card feature" data-reveal>
+                        <div class="icon">
+                            <svg viewBox="0 0 48 48" aria-hidden="true">
+                                <defs>
+                                    <linearGradient id="f5" x1="0" x2="1">
+                                        <stop stop-color="#22d3ee" />
+                                        <stop offset="1" stop-color="#7c3aed" />
+                                    </linearGradient>
+                                </defs>
+                                <path d="M10 28h28M10 20h18" stroke="url(#f5)" stroke-width="3"
+                                    stroke-linecap="round" />
+                                <rect x="10" y="12" width="28" height="24" rx="6" fill="none" stroke="url(#f5)"
+                                    stroke-width="3" />
+                            </svg>
+                        </div>
+                        <h3>Export & integrations</h3>
+                        <p>Export to SVG/PNG/PDF and sync to GitHub, Confluence, and Slack with one click.</p>
+                    </article>
+                    <article class="card feature" data-reveal>
+                        <div class="icon">
+                            <svg viewBox="0 0 48 48" aria-hidden="true">
+                                <defs>
+                                    <linearGradient id="f6" x1="0" x2="1">
+                                        <stop stop-color="#a78bfa" />
+                                        <stop offset="1" stop-color="#06b6d4" />
+                                    </linearGradient>
+                                </defs>
+                                <path d="M12 18h24v12H12z" fill="none" stroke="url(#f6)" stroke-width="3" />
+                                <path d="M12 18l12 12 12-12" fill="none" stroke="url(#f6)" stroke-width="3" />
+                            </svg>
+                        </div>
+                        <h3>Enterprise‑grade security</h3>
+                        <p>SSO, SCIM, RBAC, and SOC2 compliance to meet your org’s needs.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="ai-demo" id="ai-demo">
+            <div class="container ai-inner">
+                <div class="ai-copy" data-reveal>
+                    <h2>From prompt to diagram in seconds</h2>
+                    <p>Type what you need. We generate the first draft with best‑practice patterns and clean layout.</p>
+                    <div class="prompt">
+                        <label for="promptInput" class="visually-hidden">Describe your system</label>
+                        <input id="promptInput" type="text"
+                            placeholder="Generate a UML sequence for user login and MFA…" />
+                        <button class="btn primary" id="promptBtn">Generate</button>
+                    </div>
+                    <small class="muted">No code required. You always remain in control.</small>
+                </div>
+                <div class="ai-preview" data-reveal>
+                    <div class="preview-canvas">
+                        <div class="node mini">Actor: User</div>
+                        <div class="node mini">Auth Service</div>
+                        <div class="node mini">MFA Provider</div>
+                        <svg class="mini-lines" viewBox="0 0 420 180" preserveAspectRatio="xMidYMid meet"
+                            aria-hidden="true">
+                            <path d="M40 50 H200" stroke="#22d3ee" stroke-width="2" />
+                            <path d="M200 80 H360" stroke="#a78bfa" stroke-width="2" />
+                            <path d="M360 120 H40" stroke="#22d3ee" stroke-width="2" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="pricing" id="pricing">
+            <div class="container">
+                <div class="section-head" data-reveal>
+                    <h2>Simple pricing that scales with you</h2>
+                    <p>Try everything free. Upgrade anytime.</p>
+                </div>
+                <div class="billing-toggle" data-reveal>
+                    <span>Monthly</span>
+                    <button id="billingToggle" class="toggle" role="switch" aria-checked="false"
+                        aria-label="Toggle yearly billing"> <span class="knob"></span> </button>
+                    <span>Yearly <em class="save">Save 20%</em></span>
+                </div>
+                <div class="pricing-grid" data-reveal>
+                    <article class="card plan">
+                        <h3>Free</h3>
+                        <p class="price"><span class="amount" data-price-monthly="0"
+                                data-price-yearly="0">$0</span><span class="period">/forever</span></p>
+                        <ul class="features-list">
+                            <li>3 active diagrams</li>
+                            <li>UML, Flowcharts, Chen ER</li>
+                            <li>Basic AI generation</li>
+                            <li>Export to PNG</li>
+                        </ul>
+                        <a href="#" class="btn outline">Get started</a>
+                    </article>
+                    <article class="card plan highlight">
+                        <div class="badge">Most popular</div>
+                        <h3>Pro</h3>
+                        <p class="price"><span class="amount" data-price-monthly="12"
+                                data-price-yearly="9">$12</span><span class="period">/mo</span></p>
+                        <ul class="features-list">
+                            <li>Unlimited diagrams & pages</li>
+                            <li>Advanced AI workflows</li>
+                            <li>Real‑time collaboration</li>
+                            <li>Export to SVG & PDF</li>
+                        </ul>
+                        <a href="#" class="btn primary">Start free trial</a>
+                    </article>
+                    <article class="card plan">
+                        <h3>Team</h3>
+                        <p class="price"><span class="amount" data-price-monthly="29"
+                                data-price-yearly="24">$29</span><span class="period">/user</span></p>
+                        <ul class="features-list">
+                            <li>All Pro features</li>
+                            <li>SSO, SCIM, roles & permissions</li>
+                            <li>Shared libraries & templates</li>
+                            <li>Priority support</li>
+                        </ul>
+                        <a href="#" class="btn outline">Talk to sales</a>
+                    </article>
+                </div>
+                <p class="billing-note" id="billingNote" aria-live="polite" data-reveal>Billed monthly. Toggle for
+                    yearly savings.</p>
+            </div>
+        </section>
+
+        <section class="testimonials" id="testimonials">
+            <div class="container">
+                <div class="section-head" data-reveal>
+                    <h2>Loved by product teams and architects</h2>
+                    <p>Real stories from teams shipping faster with DiagramForge.</p>
+                </div>
+                <div class="testimonial-track" role="region" aria-roledescription="carousel" aria-label="Testimonials"
+                    aria-live="polite">
+                    <article class="card tcard active">
+                        <div class="avatar" aria-hidden="true">AK</div>
+                        <blockquote>“We replaced three tools with DiagramForge. AI drafts our sequence diagrams, and the
+                            team co‑edits in real time. Huge time saver.”</blockquote>
+                        <div class="author">Anita Kapoor — Staff Engineer, Alto</div>
+                    </article>
+                    <article class="card tcard">
+                        <div class="avatar" aria-hidden="true">MS</div>
+                        <blockquote>“The Chen ER support is brilliant. Our data models are finally consistent across
+                            teams.”</blockquote>
+                        <div class="author">Marco Silva — Head of Data, Lumen</div>
+                    </article>
+                    <article class="card tcard">
+                        <div class="avatar" aria-hidden="true">JL</div>
+                        <blockquote>“Feels buttery smooth. The canvas interactions and snapping are chef’s kiss.”
+                        </blockquote>
+                        <div class="author">Jia Li — Product Designer, Orbit</div>
+                    </article>
+                </div>
+                <div class="dots" id="tDots" role="tablist" aria-label="Choose testimonial">
+                    <button class="dot active" role="tab" aria-selected="true" aria-controls="t1"></button>
+                    <button class="dot" role="tab" aria-selected="false" aria-controls="t2"></button>
+                    <button class="dot" role="tab" aria-selected="false" aria-controls="t3"></button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div>
+                <a href="#" class="brand small">
+                    <svg class="brand-mark" viewBox="0 0 48 48" aria-hidden="true">
+                        <defs>
+                            <linearGradient id="brand-g2" x1="0" x2="1" y1="0" y2="1">
+                                <stop stop-color="#7c3aed"></stop>
+                                <stop offset="1" stop-color="#06b6d4"></stop>
+                            </linearGradient>
+                        </defs>
+                        <circle cx="14" cy="14" r="6" fill="url(#brand-g2)"></circle>
+                        <circle cx="34" cy="14" r="6" fill="url(#brand-g2)"></circle>
+                        <circle cx="24" cy="34" r="6" fill="url(#brand-g2)"></circle>
+                        <path d="M18 18 L24 30 L30 18" stroke="#22d3ee" stroke-width="2.5" fill="none"
+                            stroke-linecap="round"></path>
+                    </svg>
+                    <span>DiagramForge</span>
+                </a>
+                <p class="muted">Design with clarity. Build with confidence.</p>
+            </div>
+            <nav class="footer-links">
+                <div>
+                    <h4>Product</h4>
+                    <a href="#features">Features</a>
+                    <a href="#pricing">Pricing</a>
+                    <a href="#ai-demo">AI</a>
+                </div>
+                <div>
+                    <h4>Company</h4>
+                    <a href="#">About</a>
+                    <a href="#">Careers</a>
+                    <a href="#">Contact</a>
+                </div>
+                <div>
+                    <h4>Resources</h4>
+                    <a href="#">Templates</a>
+                    <a href="#">Docs</a>
+                    <a href="#">Changelog</a>
+                </div>
+            </nav>
+            <div class="footer-cta">
+                <p>Ready to build diagrams 10× faster?</p>
+                <a class="btn primary" href="#pricing">Start free</a>
+            </div>
+        </div>
+        <div class="container legal">
+            <small>© <span id="year"></span> DiagramForge, Inc. All rights reserved.</small>
+            <div class="legal-links">
+                <a href="#">Privacy</a>
+                <a href="#">Terms</a>
+                <a href="#">Security</a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
