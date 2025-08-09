@@ -11,3 +11,4 @@ declare module "react/jsx-runtime" {
   export function jsx(...args: any[]): any;
   export function jsxs(...args: any[]): any;
 }
+
