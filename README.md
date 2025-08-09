@@ -36,6 +36,12 @@ GPT-5-UI-Design-Test/
   - **Pricing toggle** with yearly/monthly prices and dynamic copy
   - Intersection‑observer powered reveal animations and a small carousel for testimonials
 
+### Prompt used
+
+```
+create a really looking and modern landing page for an online diagramming platform for UML, flowcharts, and Chen notation. Include hero with CTA, features (multi-diagram, AI generation, collaboration), pricing, testimonials, and footer. Use modern tech style with vibrant accents and smooth animations.
+```
+
 ### Screenshots
 
 ![Landing page — hero](landing-page/result-1.JPG)
@@ -59,6 +65,12 @@ npx serve -s landing-page -l 5174
 - **Input**: `UI-Clone-Test/emailclient.webp` (shown below).
 - **Tech**: React 19 + TypeScript + Tailwind CSS 4 + Vite 7, generated inside `UI-Clone-Test/`.
 - **Component structure**: `Sidebar`, `TopBar`, `QuickMessages`, `MessageList`, `MessageDetail` with sample data (`data/messages.ts`).
+
+### Prompt used
+
+```
+Design and implement a modern, sleek, and professional email client UI exactly matching the attached screenshot. Replicate the layout, colors, typography, and spacing with pixel-perfect precision. Include smooth animations and ensure the UI is responsive. No backend or functionality — UI only
+```
 
 ### Reference vs. result
 
